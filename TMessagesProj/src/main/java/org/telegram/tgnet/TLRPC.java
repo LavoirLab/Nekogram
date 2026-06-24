@@ -49,7 +49,7 @@ import org.telegram.ui.Stories.MessageMediaStoryFull_old;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import tw.nekomimi.nekogram.helpers.WebAppHelper;
+import tw.nekomimi.nekogram.tlv.TlViewer;
 
 public class TLRPC {
 
@@ -59161,7 +59161,7 @@ public class TLRPC {
         }
 
         protected void writeAttachPath(OutputSerializedData stream) {
-            if (stream instanceof WebAppHelper.CleanSerializedData) return;
+            if (stream instanceof TlViewer.CleanSerializedData) return;
             if (ApplicationLoader.isAndroidTestEnvironment()) {
                 return;
             }

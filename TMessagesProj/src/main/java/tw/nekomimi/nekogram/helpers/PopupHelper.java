@@ -53,6 +53,7 @@ import java.util.List;
 import java.util.Set;
 
 import tw.nekomimi.nekogram.DatacenterPopupWrapper;
+import tw.nekomimi.nekogram.tlv.TlViewer;
 
 public class PopupHelper {
 
@@ -130,7 +131,7 @@ public class PopupHelper {
             ActionBarMenuSubItem subItem = ActionBarMenuItem.addItem(popupLayout, R.drawable.msg_stories_caption, LocaleController.getString(R.string.ViewAsJson), false, fragment.getResourceProvider());
             subItem.setOnClickListener(v -> {
                 popupWindow.dismiss();
-                WebAppHelper.openTLViewer(fragment, getPeerAndFull(fragment, did));
+                TlViewer.openTlViewer(fragment, getPeerAndFull(fragment, did));
             });
         }
         popupLayout.setParentWindow(popupWindow);
