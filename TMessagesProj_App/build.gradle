@@ -11,9 +11,10 @@ dependencies {
 }
 
 sentry {
-    uploadNativeSymbols = true
-    includeSourceContext = true
-    additionalSourceDirsForSourceContext = [ '../TMessagesProj/src/main/java' ]
+    uploadNativeSymbols = false
+    includeSourceContext = false
+    autoUploadNativeSymbols = false
+    autoUploadProguardMapping = false
     autoInstallation {
         enabled = false
     }
