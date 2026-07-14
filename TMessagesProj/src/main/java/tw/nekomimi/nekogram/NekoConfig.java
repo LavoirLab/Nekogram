@@ -72,6 +72,10 @@ public class NekoConfig {
     public static boolean ignoreBlocked = false;
     public static boolean hideKeyboardOnChatScroll = false;
     public static boolean hideAllTab = false;
+    public static boolean hideOnlineStatus = false;
+    public static boolean secretlyReadMessages = false;
+    public static boolean hideTypingStatus = false;
+    public static boolean hideStoryViews = false;
     public static boolean confirmAVMessage = false;
     public static boolean askBeforeCall = true;
     public static boolean disableNumberRounding = false;
@@ -189,6 +193,10 @@ public class NekoConfig {
             hideKeyboardOnChatScroll = preferences.getBoolean("hideKeyboardOnChatScroll", false);
             useSystemEmoji = preferences.getBoolean("useSystemEmoji", false);
             hideAllTab = preferences.getBoolean("hideAllTab", false);
+            hideOnlineStatus = preferences.getBoolean("hideOnlineStatus", false);
+            secretlyReadMessages = preferences.getBoolean("secretlyReadMessages", false);
+            hideTypingStatus = preferences.getBoolean("hideTypingStatus", false);
+            hideStoryViews = preferences.getBoolean("hideStoryViews", false);
             tabsTitleType = preferences.getInt("tabsTitleType2", TITLE_TYPE_MIX);
             confirmAVMessage = preferences.getBoolean("confirmAVMessage", false);
             askBeforeCall = preferences.getBoolean("askBeforeCall", true);
@@ -732,6 +740,38 @@ public class NekoConfig {
         SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean("hideAllTab", hideAllTab);
+        editor.apply();
+    }
+
+    public static void toggleHideOnlineStatus() {
+        hideOnlineStatus = !hideOnlineStatus;
+        SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("hideOnlineStatus", hideOnlineStatus);
+        editor.apply();
+    }
+
+    public static void toggleSecretlyReadMessages() {
+        secretlyReadMessages = !secretlyReadMessages;
+        SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("secretlyReadMessages", secretlyReadMessages);
+        editor.apply();
+    }
+
+    public static void toggleHideTypingStatus() {
+        hideTypingStatus = !hideTypingStatus;
+        SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("hideTypingStatus", hideTypingStatus);
+        editor.apply();
+    }
+
+    public static void toggleHideStoryViews() {
+        hideStoryViews = !hideStoryViews;
+        SharedPreferences preferences = ApplicationLoader.applicationContext.getSharedPreferences("nekoconfig", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("hideStoryViews", hideStoryViews);
         editor.apply();
     }
 

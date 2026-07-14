@@ -59,6 +59,7 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
     private final int generalRow = rowId++;
     private final int appearanceRow = rowId++;
     private final int chatRow = rowId++;
+    private final int ghostModeRow = rowId++;
     private final int passcodeRow = rowId++;
     private final int experimentRow = rowId++;
     private final int accessibilityRow = rowId++;
@@ -164,6 +165,7 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
         items.add(UItem.asButton(generalRow, R.drawable.msg_media, LocaleController.getString(R.string.General)).slug("general"));
         items.add(UItem.asButton(appearanceRow, R.drawable.msg_theme, LocaleController.getString(R.string.ChangeChannelNameColor2)).slug("appearance"));
         items.add(UItem.asButton(chatRow, R.drawable.msg_discussion, LocaleController.getString(R.string.Chat)).slug("chat"));
+        items.add(UItem.asButton(ghostModeRow, R.drawable.ghost, LocaleController.getString(R.string.GhostMode)).slug("ghost"));
         if (!PasscodeHelper.isSettingsHidden()) {
             items.add(UItem.asButton(passcodeRow, R.drawable.msg_secret, LocaleController.getString(R.string.PasscodeNeko)).slug("passcode"));
         }
@@ -203,6 +205,8 @@ public class NekoSettingsActivity extends BaseNekoSettingsActivity implements Fa
         var id = item.id;
         if (id == chatRow) {
             presentFragment(new NekoChatSettingsActivity());
+        } else if (id == ghostModeRow) {
+            presentFragment(new NekoGhostModeSettingsActivity());
         } else if (id == generalRow) {
             presentFragment(new NekoGeneralSettingsActivity());
         } else if (id == appearanceRow) {
