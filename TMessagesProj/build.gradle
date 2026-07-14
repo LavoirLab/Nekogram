@@ -91,7 +91,7 @@ dependencies {
 
 lsparanoid {
     seed = 7436
-    variantFilter = { variant -> variant.buildType == "release" || variant.buildType == "play" }
+    variantFilter = { variant -> variant.buildType == "play" }
 }
 
 android {
