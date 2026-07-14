@@ -46,6 +46,15 @@
     <string name="CheckAllAdministrated">व्यवस्थापक जोड़ें</string>
     <string name="RearVideoMessages">वीडियो कॉल्स में पिछला कैमरा</string>
     <string name="HideAllTab">\"सभी संदेशों\" टैब को छिपाए</string>
+    <string name="GhostMode">घोस्ट मोड</string>
+    <string name="HideOnlineStatus">ऑनलाइन स्टेटस छिपाएं</string>
+    <string name="HideOnlineStatusAbout">आपका ऑनलाइन स्टेटस दूसरों से छिपा रहेगा (जब तक आप नया मैसेज न भेजें)</string>
+    <string name="SecretlyReadMessages">मैसेज गुपचुप पढ़ें</string>
+    <string name="SecretlyReadMessagesAbout">बिना रीड टिक भेजे दूसरों के मैसेज पढ़ें (कन्वर्सेशन प्रीव्यू जैसा)</string>
+    <string name="HideTypingStatus">टाइपिंग छिपाएं</string>
+    <string name="HideTypingStatusAbout">आपका टाइपिंग, भेजना, रिकॉर्डिंग वगैरह स्टेटस दूसरों को नहीं भेजा जाएगा</string>
+    <string name="HideStoryViews">स्टोरी व्यू छिपाएं</string>
+    <string name="HideStoryViewsAbout">स्टोरी देखने पर उसके मालिक को पता नहीं चलेगा</string>
     <string name="TabTitleType">टैब्स पर दिखाए</string>
     <string name="TabTitleTypeTip">टेलीग्राम के द्वारा आईकॉन्स क्लाउड-सिंक्ड रहते हैं</string>
     <string name="TabTitleTypeText">टाइटल्स</string>
